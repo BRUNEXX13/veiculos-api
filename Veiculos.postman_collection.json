@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "12457d77-2a30-4177-807f-eef315064f63",
+		"name": "Veiculos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\"marca\" : \"chevron\",\n\t\"ano\" : \"1990\",\n\t\"descricao\" : \"Escort 2.0\",\n\t\"vendido\" : \"true\",\n\t\"dataCriacao\" : \"10/10/1990\",\n\t\"dataAtualizacao\": \"19/10/2000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "Cria Veiculo",
+					"host": [
+						"Cria Veiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE VEICULO",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/veiculos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"veiculos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BUSCA VEICULO ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/veiculos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"veiculos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ATUALIZA",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"marca\": \"FordBRUNO\",\n    \"ano\": 1980,\n    \"descricao\": \"teste223\",\n    \"vendido\": true,\n    \"dataCriacao\": \"10/10/1990\",\n    \"dataAtualizacao\": \"10/01/1991\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/veiculos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"veiculos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BUSCA POR MARCA",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"marca\": \"Ford11\",\n    \"ano\": 1980,\n    \"descricao\": \"XALALAL\",\n    \"vendido\": true,\n    \"dataCriacao\": \"10/10/1990\",\n    \"dataAtualizacao\": \"10/01/1991\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/veiculos/por-marca?marca=ford",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"veiculos",
+						"por-marca"
+					],
+					"query": [
+						{
+							"key": "marca",
+							"value": "ford"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LISTA VEICULOS NAO VENDIDOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/veiculos/listarVeiculosNaoVendidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"veiculos",
+						"listarVeiculosNaoVendidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/veiculos/2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/veiculos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"veiculos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
